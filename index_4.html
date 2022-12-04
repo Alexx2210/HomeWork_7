@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <h1 id="width">Ширина окна браузера: </h1>
+    <h1 id="height">Высота окна браузера: </h1>
+    <script>
+        let first = document.getElementById('width');
+        let second = document.getElementById('height');
+
+        function view() {
+            let viewWidth = document.documentElement.clientWidth;
+            let viewHeight = document.documentElement.clientHeight;
+
+            first.innerHTML = `Ширина окна браузера: ${viewWidth}`;
+            second.innerHTML = `Высота окна браузера: ${viewHeight}`;
+        };
+        view();
+        window.onresize = view;
+    </script>
+</body>
+</html>

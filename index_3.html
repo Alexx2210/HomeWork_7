@@ -1,0 +1,21 @@
+<html>
+<body>
+    <form>
+        <select id="select-data">
+            <option>Красный</option>
+            <option>Зеленый</option>
+            <option>Белый</option>
+            <option>Черный</option>
+        </select>
+        <input type="button" onclick="removeOption()" value="Выбрать и удалить">
+    </form>
+    <script>
+        let select = document.getElementById('select-data');
+
+        function removeOption() {
+            const index = select.selectedIndex;
+            select.remove(index);
+        };
+    </script>
+</body>
+</html>

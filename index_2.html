@@ -1,0 +1,23 @@
+<html>
+<body>
+    <table id="some-table">
+        <tr>
+            <td>Строка1 столбец1</td>
+            <td>Строка1 столбец2</td>
+        </tr>
+        <tr>
+            <td>Строка2 столбец1</td>
+            <td>Строка2 столбец2</td>
+        </tr>
+    </table><br>
+    <input type="button" onclick="insertRow()" value="Вставить Строку">
+    <script>
+        let table = document.getElementById('some-table');
+        let counterTable = 2;
+        function insertRow() {
+            counterTable++;
+            table.insertAdjacentHTML('beforeend', `<tr><td>Строка${counterTable} столбец1</td><td>Строка${counterTable} столбец2</td></tr>`);
+        };
+    </script>
+</body>
+</html>

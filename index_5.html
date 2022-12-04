@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    <h1>Введите значение радиуса и вычислится объём сферы</h1>
+        <p>Радиус</p>
+        <input id="radius">
+        <p>Объём</p>
+        <input id="volume" placeholder="0.0000">
+        <input type="button" onclick="calculate()" value="Вычислить">
+
+        <script>
+            function calculate() {
+                let radius = document.getElementById('radius').value;
+                radius = ((4/3)*3.14)*(radius*radius*radius);
+                document.getElementById('volume').value = radius;
+            };
+        </script>
+</body>
+</html>
